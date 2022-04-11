@@ -25,6 +25,13 @@ SECRET_KEY = 'django-insecure-t(fk6@7s*cjh-gq@&elc1two21kiy(p81y1v%m5oc4g1_j4a2@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#EMAIL HOSTING
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'muhedin1998@gmail.com'
+EMAIL_HOST_PASSWORD = 'Kokoska1234'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 ALLOWED_HOSTS = []
 
 
@@ -38,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'taggit',
 ]
 
 MIDDLEWARE = [
