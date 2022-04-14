@@ -10,8 +10,9 @@
 		</h2>
 	{% endif %}
 	{% for post in posts %}
+	<div class="rounded bg-success p-2 text-dark bg-opacity-25">
 		<h2>
-			<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+			<a class="text-decoration-none" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
 		</h2>
 		<p class="tags">Tags:
 			{% for tag in post.tags.all %}
@@ -23,6 +24,9 @@
 			Published {{ post.publish }} by {{ pos.author }}
 		</p>
 		{{ post.body|truncatewords:30|linebreaks }}
+		</div>
+		<br>
 	{% endfor %}
+
 	{% include "pagination.html" with page=posts %}
 {% endblock %}
